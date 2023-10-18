@@ -1,0 +1,9 @@
+<div class="container m-5">
+  <div class="h3">Posts</div>
+  <% @posts.each do |post| %>
+    <div class="m-2">
+      <h5><%= post.id %>:  Title: <%= post.title %>, Content: <%= post.content %>, <%= link_to "Show", post_path(post.id) %>, <%= link_to "Edit", edit_post_path(post.id) %>, <%= link_to "Delete", post_path(post.id), data: { "turbo-method": :delete } %></h5>
+    </div>
+  <% end %>
+  <%= link_to "New Post", new_post_path, class: "btn btn-primary" %>
+</div>

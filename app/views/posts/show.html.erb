@@ -1,0 +1,6 @@
+<div class="container m-5">
+  <h5><%= @post.id %>: Title: <%= @post.title %>, Content: <%= @post.content %></h5>
+  <% @post.pictures.each do |picture| %>
+    <%= image_tag picture, class: "w-25 h-25" %>
+  <% end %>
+</div>

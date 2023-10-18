@@ -1,0 +1,15 @@
+<%= form_for @post, html: { class: "m-5 container", multipart: true } do |f| %>
+  <div class="mb-2">
+    <%= f.label :title, class: "form-label" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="mb-2">
+    <%= f.label :content, class: "form-label" %>
+    <%= f.text_field :content, class: "form-control" %>
+  </div>
+
+  <div class="d-flex">
+    <%= f.submit "Create Post", class: "btn btn-primary" %>
+  </div>
+<% end %>
